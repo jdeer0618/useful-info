@@ -8,3 +8,6 @@
 
 ####save rules and make persistant
 `service iptables save`
+
+##resources
+https://fedoraproject.org/wiki/How_to_edit_iptables_rules
