@@ -5,3 +5,6 @@
 
 ####insert rule at rule number
 `iptables -I INPUT 1 -p tcp --dport 9013 -j ACCEPT`
+
+####save rules and make persistant
+`service iptables save`
