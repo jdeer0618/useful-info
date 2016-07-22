@@ -1,14 +1,17 @@
 ##netcat commands
 
 ####check if a tcp port is open on remote host
-`nc -vz -w1 txdal11slsds01.parsons.com 8089`
+`nc -vz -w1 <hostname> 8089`
 
 
 ####check if a udp port is open on remote host
-`nc -vz -4u -w1 txdal11slsds01.parsons.com 8089`
+`nc -vz -4u -w1 <hostname> 8089`
 
 ####send text to test syslog reception
 `echo "this is a test message" | <netcat-command>`
+
+####run in a loop
+`while true; do nc -vz -w5 <hostname> 9997; done`
 
 ##resources
 http://mikeberggren.com/post/53883822425/ncudp
