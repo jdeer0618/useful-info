@@ -9,5 +9,8 @@
 ####save rules and make persistant
 `service iptables save`
 
+####add comments
+`-m comment --comment "some comment here"`
+
 ##resources
 https://fedoraproject.org/wiki/How_to_edit_iptables_rules
