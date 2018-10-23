@@ -1,3 +1,4 @@
+```
 | tstats summariesonly=t latest(_time) AS _time FROM datamodel=Network_Traffic WHERE sourcetype=aws:cloudwatchlogs:vpcflow  BY  All_Traffic.src_ip All_Traffic.dest_ip
 | eval pairKey = md5('All_Traffic.src_ip' . 'All_Traffic.dest_ip')
 | eval data = "now"
@@ -100,3 +101,4 @@
 | tstats summariesonly=t latest(_time) AS _time FROM datamodel=Network_Traffic WHERE sourcetype=aws:cloudwatchlogs:vpcflow All_Traffic.src_ip!="-" earliest=@d latest=now BY All_Traffic.src_ip All_Traffic.dest_ip source
 | `drop_dm_object_name("All_Traffic")`
 | rex field=source "^(?<region>[^\:]+)\:(?<vpc_group>[^\:]+)\:(?<interface_id>.+)-all"
+```
